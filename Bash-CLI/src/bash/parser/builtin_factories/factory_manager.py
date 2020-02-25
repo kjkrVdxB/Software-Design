@@ -4,6 +4,8 @@ from .echo_factory import EchoFactory
 from .grep_factory import GrepFactory
 from .pwd_factory import PwdFactory
 from .wc_factory import WcFactory
+from .cd_factory import CdFactory
+from .ls_factory import LsFactory
 from .. import TokenType
 
 
@@ -12,7 +14,9 @@ class FactoryManager:
                            "echo": EchoFactory(),
                            "pwd": PwdFactory(),
                            "wc": WcFactory(),
-                           "grep": GrepFactory()
+                           "grep": GrepFactory(),
+                           "cd": CdFactory(),
+                           "ls": LsFactory()
                            }
 
     def __init__(self, environment, controller):
